@@ -3,8 +3,7 @@
 This plugin automatically disables certain features if the opened file is big.
 File size and features to disable are configurable.
 
-Features/integrations include: `LSP`, `treesitter`, `indent_blankline`,
-`illuminate.vim` `NoMatchParen`, `syntax off`, ... (full list at the end)
+Features/integrations include: `LSP`, `treesitter`, `indent_blankline`, `illuminate.vim` `NoMatchParen`, `syntax off`, ... (full list at the end)
 
 You can also add your own features.
 
@@ -89,26 +88,17 @@ require("bigfile").setup {
 
 # Caveats
 
--   `matchparen` stays disabled, even after you close the big file, you can call
-    `:DoMatchParen` manually to enable it
+- `matchparen` stays disabled, even after you close the big file, you can call `:DoMatchParen` manually to enable it
 
 # Features/integrations
 
-| name               | function                              |
-| ------------------ | ------------------------------------- |
-| `lsp`              | detaches the lsp client from buffer   |
-| `treesitter`       | disables treesitter for the buffer    |
-| `illuminate`       | disables `RRethy/vim-illuminate` for  |
-:                    : the buffer                            :
-| `indent_blankline` | disables                              |
-:                    : `lukas-reineke/indent-blankline.nvim` :
-:                    : for the buffer                        :
-| `syntax`           | `:syntax off` for the buffer          |
-| `filetype`         | `filetype = ""` for the buffer        |
-| `vimopts`          | `swapfile = false` `foldmethod =      |
-:                    : "manual"` `undolevels = -1`           :
-:                    : `undoreload = 0` `list = false` for   :
-:                    : the buffer                            :
-| `matchparen`       | `:NoMatchParen` globally, currently   |
-:                    : this feature will stay disabled, even :
-:                    : after you close the big file          :
+| name               | function                                                                                                    |
+| ------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `lsp`              | detaches the lsp client from buffer                                                                         |
+| `treesitter`       | disables treesitter for the buffer                                                                          |
+| `illuminate`       | disables `RRethy/vim-illuminate` for the buffer                                                             |
+| `indent_blankline` | disables `lukas-reineke/indent-blankline.nvim` for the buffer                                               |
+| `syntax`           | `:syntax off` for the buffer                                                                                |
+| `filetype`         | `filetype = ""` for the buffer                                                                              |
+| `vimopts`          | `swapfile = false` `foldmethod = "manual"` `undolevels = -1` `undoreload = 0` `list = false` for the buffer |
+| `matchparen`       | `:NoMatchParen` globally, currently this feature will stay disabled, even after you close the big file      |
